@@ -3,23 +3,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private List<Product> products; // Список товарів у замовленні
-    private double totalPrice; // Загальна вартість замовлення
-    private String status; // Статус замовлення
+    private List<Product> products; 
+    private double totalPrice; 
+    private String status; 
 
 
-    // Конструктор
+   
     public Order(Cart cart) {
-        this.products = new ArrayList<>(cart.getProducts()); // Копіювання товарів з кошика
+        this.products = new ArrayList<>(cart.getProducts()); 
         this.totalPrice = cart.getTotalPrice();
-        this.status = "Нове"; // Стандартний статус при створенні замовлення
+        this.status = "Нове"; 
     }
 
-    // Метод для зміни статусу замовлення
+
     public void setStatus(String status) {
         this.status = status;
     }
-    // Геттери
+   
     public List<Product> getProducts() {
         return products;
     }
@@ -29,7 +29,7 @@ public class Order {
     public String getStatus() {
         return status;
     }
-    // Метод для виведення інформації про замовлення
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Замовлення:\n");
