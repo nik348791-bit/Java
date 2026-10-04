@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Category {
-    private int id; // Унікальний ідентифікатор категорії
-    private String name; // Назва категорії
+    private int id; 
+    private String name; 
 }
