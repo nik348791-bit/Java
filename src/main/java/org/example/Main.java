@@ -71,8 +71,8 @@ public class Main {
                         orderHistory.add(order);
                         System.out.println(order);
                         cart.clear();
-                        break;
                     }
+                     break;
                 case 6:
                     if (orderHistory.isEmpty()){
                         System.out.println("Історія замовлень порожня");
