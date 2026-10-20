@@ -1,32 +1,29 @@
 package org.example;
+
+import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor
 public class Cart {
-    private List<Product> products;
-
-
-    public Cart() {
-        this.products = new ArrayList<>();
-    }
-
+    private List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product) {
         products.add(product);
     }
 
-  
     public void removeProduct(Product product) {
         products.remove(product);
     }
+
     public List<Product> getProducts() {
-        return new ArrayList<>(products); 
-    }
-    public void clear() {
-        products.clear(); 
+        return new ArrayList<>(products);
     }
 
-    
+    public void clear() {
+        products.clear();
+    }
+
     public double getTotalPrice() {
         double total = 0;
         for (Product product : products) {
@@ -35,7 +32,6 @@ public class Cart {
         return total;
     }
 
-    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Кошик містить:\n");
@@ -46,5 +42,3 @@ public class Cart {
         return sb.toString();
     }
 }
-
-
